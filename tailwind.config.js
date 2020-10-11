@@ -6,6 +6,7 @@ module.exports = {
     },
     variants: {
       cursor: ['responsive', 'hover', 'focus'],
+      opacity: ['responsive', 'hover', 'focus', 'group-hover'],
     },
     plugins: [],
   }

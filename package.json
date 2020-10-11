@@ -10,6 +10,7 @@
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
     "env-cmd": "^10.1.0",
+    "moment": "^2.29.1",
     "querystring": "^0.2.0",
     "request": "^2.88.2",
     "tailwindcss": "^1.8.10",

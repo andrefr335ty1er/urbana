@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="bg-gradient-to-b from-orange-400 via-red-500 to-pink-500 h-full">
     <div class="flex flex-row-reverse p-5">
       <a :href="this.profile.external_urls.spotify">
         <img class="rounded-full h-40" :src="this.profile.images[0].url" />
@@ -69,7 +69,7 @@ export default {
           Authorization:
             "Basic " +
             new Buffer(
-              process.env.CLIENT_ID + ":" + process.env.CLIENT_SECRET
+              process.env.VUE_APP_CLIENT_ID + ":" + process.env.VUE_APP_CLIENT_SECRET
             ).toString("base64"),
         },
         form: {
@@ -91,24 +91,7 @@ export default {
       return new_token;
     },
     getPlaylistItems(playlistID) {
-      var url =
-        "https://api.spotify.com/v1/playlists/" +
-        playlistID +
-        "/tracks?" +
-        querystring.stringify({
-          fields:
-            "items(track(artists,duration_ms,href,id,name,priview_url,uri))",
-        });
-
-      this.$http
-        .get(url, this.config)
-        .then((response) => {
-          console.log(response.data);
-          this.playlistItems = response.data.items;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      this.$router.push({ name: 'Tracks', params : { playlistID } });
     },
   },
   mounted() {

@@ -28,9 +28,9 @@ export default {
     login() {
       var state = this.generateRandomString(16);
 
-      var redirect_uri = process.env.REDIRECT_URI;
-      var client_id = process.env.CLIENT_ID; 
-      var client_secret = process.env.CLIENT_SECRET; 
+      var redirect_uri = process.env.VUE_APP_REDIRECT_URI;
+      var client_id = process.env.VUE_APP_CLIENT_ID; 
+      var client_secret = process.env.VUE_APP_CLIENT_SECRET; 
 
       console.log(client_id);
       console.log("client id: " + process.env.CLIENT_ID);

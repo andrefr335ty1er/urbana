@@ -10,9 +10,9 @@ export default {
   methods: {},
   mounted() {
 
-    var redirect_uri = process.env.REDIRECT_URI;
-    var client_id = process.env.CLIENT_ID; 
-    var client_secret = process.env.CLIENT_SECRET; 
+    var redirect_uri = process.env.VUE_APP_REDIRECT_URI;
+    var client_id = process.env.VUE_APP_CLIENT_ID; 
+    var client_secret = process.env.VUE_APP_CLIENT_SECRET; 
 
     var urlParams = new URLSearchParams(window.location.search);
     var code = urlParams.get("code") || null;

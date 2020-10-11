@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-gradient-to-b from-orange-400 via-red-500 to-pink-500 h-full">
+  <div id="app" class="">
     <router-view/>
   </div>
 </template>

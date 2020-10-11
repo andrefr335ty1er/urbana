@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Profile from '../views/Profile.vue'
 import Callback from '../views/Callback.vue'
+import Tracks from '../views/Tracks.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ Vue.use(VueRouter)
     path: '/callback',
     name: 'Callback',
     component: Callback
+  },
+  {
+    path: '/tracks/:playlistID',
+    name: 'Tracks',
+    component: Tracks
   }
 ]
 
