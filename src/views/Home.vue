@@ -35,7 +35,8 @@ export default {
       console.log(client_id);
       console.log("client id: " + process.env.CLIENT_ID);
       // your application requests authorization
-      var scope = "streaming playlist-read-private user-read-private user-read-email";
+      var scope = `streaming playlist-read-private user-read-private user-read-email 
+                   user-read-currently-playing user-modify-playback-state`;
       window.location.replace(
         "https://accounts.spotify.com/authorize?" +
           querystring.stringify({

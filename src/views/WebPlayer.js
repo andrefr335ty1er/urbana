@@ -1,4 +1,5 @@
-const webPlayer = (accessToken) => {
+const webPlayer = async (accessToken) => {
+    var deviceID = '';
     window.onSpotifyWebPlaybackSDKReady = () => {
       const token = accessToken;
       const player = new Spotify.Player({
@@ -29,8 +30,9 @@ const webPlayer = (accessToken) => {
       });
 
       // Ready
-      player.addListener("ready", ({ device_id }) => {
+      player.addListener("ready", async ({ device_id }) => {
         console.log("Ready with Device ID", device_id);
+        await sessionStorage.setItem("deviceID", device_id);
       });
 
       // Not Ready
@@ -43,6 +45,8 @@ const webPlayer = (accessToken) => {
         console.log("Web Player connected!");
       }
     }
+
+    //return deviceID;
 }
 
 export default webPlayer;

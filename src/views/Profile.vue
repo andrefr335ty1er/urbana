@@ -35,6 +35,7 @@
   </div>
 </template>
 
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
 <script>
 import request from "request";
 import webPlayer from "./WebPlayer.js";
@@ -126,6 +127,7 @@ export default {
 
         // initialize the web player
         webPlayer(access_token);
+        
       }
     }
 
