@@ -7,7 +7,7 @@ const webPlayer = async (accessToken) => {
         getOAuthToken: (cb) => {
           cb(token);
         },
-        volume: 0.5,
+        volume: 0.3,
       });
 
       // Error handling
@@ -26,7 +26,8 @@ const webPlayer = async (accessToken) => {
 
       // Playback status updates
       player.addListener("player_state_changed", (state) => {
-        console.log(state);
+        //console.log(state);
+        //console.log("Paused:" + state.paused);
       });
 
       // Ready
